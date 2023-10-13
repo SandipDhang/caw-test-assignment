@@ -1,0 +1,37 @@
+.r-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .r-table-header {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 8px 8px 0px 0px;
+    color: rgba($color: #000000, $alpha: 0.5);
+    font-weight: 600;
+  }
+
+  .r-table-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .row-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.8);
+      align-self: stretch;
+      & > * {
+        align-self: stretch;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+

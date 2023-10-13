@@ -1,0 +1,10 @@
+@import "./common/index.scss";
+@import "./home/index.scss";
+
+.reeco-home-wrapper {
+  background-color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
