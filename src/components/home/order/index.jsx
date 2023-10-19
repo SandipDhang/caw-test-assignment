@@ -55,7 +55,58 @@ const OrderDetails = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    // fetchData();
+    const timeout = setTimeout(() => {
+      console.log("first");
+      dispatch(
+        setOrderDetails({
+          id: "order_32457ABC",
+          order_id: "Order32457ABC",
+          supplier: "East coast fruits & vegetables",
+          shipping_date: "Thu, Feb 10",
+          total: "15,028.3",
+          department: "300-444-678",
+          status: "pending",
+          products: [
+            {
+              id: 1,
+              product_name: "Chicken breast",
+              imgurl: "https://i.postimg.cc/064t8qVk/apple.png",
+              brand: "Hermel Black",
+              price: 60.7,
+              quantity: 0,
+            },
+            {
+              id: 2,
+              product_name: "Chicken leg piece",
+              imgurl: "https://i.postimg.cc/vgkfgYnB/avocado.jpg",
+              brand: "Hermel Black",
+              price: 60.7,
+              quantity: 15,
+            },
+            {
+              id: 3,
+              product_name: "Chicken tandoori",
+              imgurl: "https://i.postimg.cc/vgkfgYnB/avocado.jpg",
+              brand: "Hermel Black",
+              price: 60.7,
+              quantity: 15,
+            },
+            {
+              id: 4,
+              product_name: "Something else",
+              imgurl: "https://i.postimg.cc/vgkfgYnB/avocado.jpg",
+              brand: "Hermel Black",
+              price: 60.7,
+              quantity: 0,
+              discounted_price: 70,
+            },
+          ],
+        })
+      );
+    }, 2000);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
